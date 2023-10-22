@@ -1,0 +1,17 @@
+*.laz
+*.las
+*.exe
+temp
+temp*
+*.zip
+*.xyz
+*.png
+*.pdf
+*.dxf
+*.pgw
+.mypy_cache
+downloads
+ground
+__pycache__
+test-lastools
+test-pdal
