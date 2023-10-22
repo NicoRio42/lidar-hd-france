@@ -26,5 +26,8 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/prefer-ts-expect-error": "off"
     }
 }
