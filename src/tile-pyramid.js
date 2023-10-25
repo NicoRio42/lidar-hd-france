@@ -12,6 +12,9 @@ import sharp from "sharp";
  * @property {number} maxZoom 
  */
 
+/**
+ * Constants computed to cover the whole metropolitan France
+ */
 const MIN_X = 343646
 const MAX_X = 1704354
 const MIN_Y = 5619537
@@ -92,8 +95,8 @@ async function createLowerZoomLevel(zoomLevel, outputDir, inputZoom) {
     if (!existsSync(parentDirPath)) throw new Error(`Cannot generate zoom level ${zoomLevel} because parent zoom levent ${zoomLevel - 1}`);
 
     await loopOnZoomLevel(parentDirPath, async ({ x: xParent, y: yParent, tilePath: parentTilePath }) => {
-        const xTopLeft = 2 * (xParent - 1) + 2;
-        const yTopLeft = 2 * (yParent - 1) + 2;
+        const xTopLeft = 2 * xParent;
+        const yTopLeft = 2 * yParent;
 
         const xDir = join(outputDir, zoomLevel.toString(), xTopLeft.toString());
         if (!existsSync(xDir)) mkdirSync(xDir, { recursive: true });

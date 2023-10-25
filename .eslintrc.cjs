@@ -31,6 +31,7 @@ module.exports = {
         "@typescript-eslint/prefer-ts-expect-error": "off",
         "n/no-callback-literal": "off",
         "@typescript-eslint/no-unused-vars": "off",
-        "no-unreachable-loop": "off"
+        "no-unreachable-loop": "off",
+        "@typescript-eslint/consistent-type-definitions": "off"
     }
 }
