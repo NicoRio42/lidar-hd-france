@@ -28,6 +28,9 @@ module.exports = {
     "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/prefer-ts-expect-error": "off"
+        "@typescript-eslint/prefer-ts-expect-error": "off",
+        "n/no-callback-literal": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-unreachable-loop": "off"
     }
 }

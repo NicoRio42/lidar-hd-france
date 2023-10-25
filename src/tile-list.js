@@ -1,5 +1,4 @@
 /**
- * 
  * @param {import("./models/geojson.model.js").GeojsonObject} geojsonObject 
  */
 export function generateTileListFromGeojsonObject(geojsonObject) {
@@ -18,8 +17,8 @@ export function generateTileListFromGeojsonObject(geojsonObject) {
     /** @type {[number, number][]} */
     const tiles = []
 
-    for (let x = Math.floor(minX / 1000); x <= maxX / 1000; x++) {
-        for (let y = Math.floor(minY / 1000); y <= maxY / 1000; y++) {
+    for (let x = Math.floor(minX / 1000 - 1); x <= maxX / 1000 + 1; x++) {
+        for (let y = Math.floor(minY / 1000 - 1); y <= maxY / 1000 + 1; y++) {
             if (isTileInsidePolygon([x, y], coordinates) || isBufferTile([x, y], coordinates)) {
                 tiles.push([x, y]);
             }
@@ -31,7 +30,6 @@ export function generateTileListFromGeojsonObject(geojsonObject) {
 
 
 /**
- * 
  * @param {[number, number]} tile 
  * @param {[number, number][]} polygon 
  */
@@ -47,7 +45,6 @@ function isBufferTile([x, y], polygon) {
 }
 
 /**
- * 
  * @param {[number, number]} tile 
  * @param {[number, number][]} polygon 
  */
@@ -59,7 +56,6 @@ function isTileInsidePolygon([x, y], polygon) {
 }
 
 /**
- * 
  * @param {[number, number]} point 
  * @param {[number, number][]} polygon 
  * @returns 
