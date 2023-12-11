@@ -1,11 +1,5 @@
-# My node.js starter
-
-To start a new project, copy this repo in an empty directory:
-
 ```sh
-npx degit https://github.com/NicoRio42/node-starter.git
-```
-
-```sh
-pnpm install
+activate mapant
+cd C:\Users\nicolas.rio\Documents\1-sources\personnel\lidar-hd-france
+pdal pipeline -i src\pipeline.json
 ```

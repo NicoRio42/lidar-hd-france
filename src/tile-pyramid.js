@@ -1,6 +1,7 @@
 import { copyFileSync, existsSync, mkdirSync, readdirSync } from "fs";
 import { join } from "path";
 import sharp from "sharp";
+import { makeDirRecursivelyIfNotExist } from "./utils.js";
 
 /**
  * @typedef {Object} CreateTilesOptions
@@ -265,11 +266,4 @@ function createTransparentTile(imagePixelSize) {
             channels: 4
         }
     })
-}
-
-/**
- * @param {string} path 
- */
-function makeDirRecursivelyIfNotExist(path) {
-    if (!existsSync(path)) mkdirSync(path, { recursive: true });
 }

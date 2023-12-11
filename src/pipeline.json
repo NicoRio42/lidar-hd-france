@@ -1,0 +1,11 @@
+[
+	"data/lidar/0924-6608.laz",
+	{
+		"type": "writers.gdal",
+		"filename": "dem.png",
+		"gdaldriver": "PNG",
+		"window_size": 20,
+		"resolution": 1.0,
+		"where": "Classification == 2"
+	}
+]
