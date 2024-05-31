@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "sharp": "npm:sharp@^0.33.4"
+  },
+  "tasks": {
+    "start": "deno run -A src/index.ts"
+  },
+  "compilerOptions": {
+    "verbatimModuleSyntax": true
+  }
+}
